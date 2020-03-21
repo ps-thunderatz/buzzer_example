@@ -4,7 +4,7 @@
 # 06/2019
 
 # Cube file name without .ioc extension
-PROJECT_NAME = stm32_project_template
+PROJECT_NAME = buzzer_example
 VERSION := 1
 
 TARGET_BOARD := target_$(PROJECT_NAME)_$(VERSION)
