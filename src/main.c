@@ -117,8 +117,6 @@ int main(void) {
     mcu_init();
     buzzer_init();
 
-    buzzer_set_volume(0.15);
-
     for (;;) {
         for (uint16_t i = 0; i < len(notes); i++) {
             buzzer_set_frequency(notes[i]);

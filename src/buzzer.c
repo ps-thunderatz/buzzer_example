@@ -33,8 +33,8 @@ void buzzer_init(void) {
     MX_TIM1_Init();
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
 
-    m_volume = 0.0;
-    buzzer_set_frequency(440); /**< A4 frequency */
+    m_volume = 0.15;
+    buzzer_set_frequency(0);
 }
 
 void buzzer_set_volume(float volume) {
