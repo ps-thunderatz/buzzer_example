@@ -2,6 +2,13 @@
 
 Esse repositório contém um exemplo de como controlar um buzzer usando timers.
 
-A geração da PWM para o buzzer é feita pelo TIM1_CH1 no pino PA8 (pino D7 na Nucleo F303RE).
+## Descrição do cube e hardware
 
-A polaridade do canal foi invertida para ser usado com um transistor PNP no acionamento.
+| Pino | Configuração | Função |
+|:---  |:---          |:---    |
+| PA8  | TIM1_CH1     | Controlar um buzzer |
+
+**Observações:**
+
+* PA8 corresponde ao pino D7 na Nucleo F303RE.
+* A polaridade do canal foi invertida para ser usado com um transistor PNP no acionamento.
