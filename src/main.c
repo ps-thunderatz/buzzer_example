@@ -5,12 +5,7 @@
  */
 
 #include "mcu.h"
-
-/*****************************************
- * Private Constant Definitions
- *****************************************/
-
-#define LED_TOGGLE_DELAY_MS 1500
+#include "buzzer.h"
 
 /*****************************************
  * Main Function
@@ -18,9 +13,16 @@
 
 int main(void) {
     mcu_init();
+    buzzer_init();
+
+    mcu_sleep(2000);
+
+    buzzer_set_volume(0.15);
 
     for (;;) {
-        led_toggle();
-        mcu_sleep(LED_TOGGLE_DELAY_MS);
+        for (uint16_t i = 800; i < 3500; i++) {
+            buzzer_set_frequency(i);
+            mcu_sleep(1);
+        }
     }
 }
